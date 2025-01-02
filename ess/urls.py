@@ -16,14 +16,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.http import HttpResponse
+
+def home_view(request):
+    return HttpResponse("Welcome to ESS Project!")
+
 
 urlpatterns = [
+    path('', home_view, name='home'),
     path('auth/', include('authentication.urls')),
-    path('', include('attendance.urls')),
-    path('', include('leaves.urls')),
-    path('', include('chat.urls')),
-    path('', include('kpi.urls')),
-    path('', include('payroll.urls')),
-    path('', include('documents.urls')),  
-    path('', include('projectmanagement.urls')), 
+    path('att/', include('attendance.urls')),
+    path('leave/', include('leaves.urls')),
+    path('chat/', include('chat.urls')),
+    path('kpi/', include('kpi.urls')),
+    path('pay/', include('payroll.urls')),
+    path('docs/', include('documents.urls')),  
+    path('pro/', include('projectmanagement.urls')), 
 ]
