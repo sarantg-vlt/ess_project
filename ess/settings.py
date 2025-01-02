@@ -78,7 +78,7 @@ MIDDLEWARE = [
 ]
 
 ALLOWED_HOSTS = [
-    'localhost',                  # For local development
+    'localhost',  '*','ess-project-pi45.onrender.com',                # For local development
     '127.0.0.1',                  # Localhost IP address
     'ess-project-7yb1.onrender.com',  # Render app domain (without "https://")
 ]
