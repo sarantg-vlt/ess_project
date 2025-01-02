@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-(7y7#dcke$n(vm08zlz2@7y@uzz4sw)bh)irmws$(^rmzj46vp
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    '*'
+    '*','https://ess-project-pi45.onrender.com'
 ]
 
 
