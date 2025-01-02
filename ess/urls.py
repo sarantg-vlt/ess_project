@@ -20,10 +20,12 @@ from django.http import HttpResponse
 
 def home_view(request):
     return HttpResponse("Welcome to ESS Project!")
-
+def favicon_view(request):
+    return HttpResponse('', content_type='image/x-icon')
 
 urlpatterns = [
     path('', home_view, name='home'),
+    path('favicon.ico', favicon_view),
     path('auth/', include('authentication.urls')),
     path('att/', include('attendance.urls')),
     path('leave/', include('leaves.urls')),
